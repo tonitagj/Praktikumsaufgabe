@@ -1,37 +1,37 @@
 import React, { useState, useEffect } from 'react';
 
 const Grid2 = () => {
-  const [searchTerm, setSearchTerm] = useState(''); // Stores the search term entered by the user
-  const [data, setData] = useState([]); // Stores the Pokémon data fetched from the API
-  const [loading, setLoading] = useState(true); // Tracks whether the data is being loaded
-  const [error, setError] = useState(null); // Stores any error messages from the API
+  const [searchTerm, setSearchTerm] = useState(''); // stores search term entered by the user
+  const [data, setData] = useState([]); // stores pokémon data fetched from the API
+  const [loading, setLoading] = useState(true); // tracks if the data is being loaded
+  const [error, setError] = useState(null); // stores error messages from API
 
-  // Fetch data from the Pokémon API
+  // Fetch data the api
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setLoading(true); // Set loading state to true while fetching
-        const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=20'); // Fetch the first 20 Pokémon
-        const result = await response.json(); // Parse the API response as JSON
+        setLoading(true); // loading state is true while fetching
+        const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=20'); // fetch the first 20 pokemon
+        const result = await response.json(); // parse the API response as JSON
         const transformedData = result.results.map((pokemon, index) => ({
           id: index + 1,
-          title: pokemon.name, // Use the Pokémon name as the title
-          text: `Learn more about ${pokemon.name}.`, // Placeholder text for each Pokémon
-          image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index + 1}.png`, // URL to Pokémon sprite
-          url: pokemon.url, // URL to detailed Pokémon data
+          title: pokemon.name, // use the pokemon name as the title
+          text: `Learn more about ${pokemon.name}.`, // Placeholder text for each pokemon
+          image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index + 1}.png`, // URL to pokemon sprite
+          url: pokemon.url, // URL to detailed data
         }));
-        setData(transformedData); // Update the state with the transformed data
-        setLoading(false); // Set loading state to false
+        setData(transformedData); // update the state with the transformed data
+        setLoading(false); // set loading state to false
       } catch (err) {
-        setError('Failed to fetch data'); // Set error state if the fetch fails
-        setLoading(false); // Set loading state to false
+        setError('Failed to fetch data'); // error state if fetch fails
+        setLoading(false); // set loading state to false
       }
     };
 
-    fetchData(); // Trigger data fetch on component mount
+    fetchData();
   }, []);
 
-  // Filter the data based on the search term
+  // Filter for the search
   const filteredData = searchTerm.length >= 3
     ? data.filter((item) =>
         item.title.toLowerCase().includes(searchTerm.toLowerCase()) // Filter Pokémon by title
