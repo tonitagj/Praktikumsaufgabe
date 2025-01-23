@@ -1,36 +1,36 @@
-import Image1 from './assets/marvel.jpg';
-import Image2 from './assets/twitch.jpeg';
-import Image3 from './assets/football.jpg';
-import Image4 from './assets/starwars.jpg';
+import Image1 from './assets/kaka.jpeg';
+import Image2 from './assets/ramos.jpeg';
+import Image3 from './assets/cristiano.jpeg';
+import Image4 from './assets/kroos.jpeg';
 
 export const gridData = [
     {
       id: 1,
       image: Image1,
-      title: "Marvel Hero",
-      text: "A brief description of a Marvel hero.",
-      url: "https://marvel.com",
+      title: "Kaka",
+      text: "If things happen it's because God has prepared me.",
+      url: "https://www.realmadrid.com/de-DE/der-club/geschichte/fussballlenden/ricardo-izecson-dos-santos-leite",
     },
     {
       id: 2,
       image: Image2,
-      title: "Twitch Streamer",
-      text: "A short bio of a famous streamer.",
-      url: "https://twitch.tv",
+      title: "Sergio Ramos",
+      text: "Sometimes you lose; that is football.",
+      url: "https://www.realmadrid.com/de-DE/der-club/geschichte/fussballlenden/sergio-ramos-garcia",
     },
     {
       id: 3,
       image: Image3,
-      title: "Football Star",
-      text: "Details about a football player.",
-      url: "https://fifa.com",
+      title: "Cristiano Ronaldo",
+      text: "My aim is to go down in history as one of the best.",
+      url: "https://www.realmadrid.com/de-DE/der-club/geschichte/fussballlenden/cristiano-ronaldo-dos-santos-aveiro",
     },
     {
       id: 4,
       image: Image4,
-      title: "Star Wars Character",
-      text: "A short bio of a Star Wars character.",
-      url: "https://starwars.com",
+      title: "Toni Kroos",
+      text: "We're Real Madrid - and being successful is part of our DNA.",
+      url: "https://www.realmadrid.com/de-DE/der-club/geschichte/fussballlenden/toni-kroos",
     },
   ];
   
