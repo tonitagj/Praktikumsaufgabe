@@ -2,7 +2,8 @@ import React from 'react';
 import './index.css';
 import Header from './Header';
 import Footer from './Footer';
-import Grid from './Grid';
+//import Grid from './Grid';
+import Grid2 from './Grid2';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <p className="text-lg text-gray-600">
           The website where you can find more about your favourite Real Madrid Football Star.
         </p>
-        <Grid />
+        <Grid2 />
       </main>
       <Footer />
     </div>

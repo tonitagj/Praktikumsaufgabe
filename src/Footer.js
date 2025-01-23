@@ -18,11 +18,11 @@ const Footer = () => {
         </ul>
         {/* Column 3 */}
         <div className="text-center">
-          <p className="text-sm">Dummy Contact Info</p>
-          <p>Name: John Doe</p>
-          <p>Address: 123 Street</p>
-          <p>Phone: 123-456-7890</p>
-          <p>Email: johndoe@example.com</p>
+          <p className="text-sm">Contact Info</p>
+          <p>Name: Tonita Gjeluci</p>
+          <p>Address: Pfeilgasse 1A</p>
+          <p>Phone: 067764344760</p>
+          <p>Email: gjelucitonita@gmail.com</p>
         </div>
       </div>
       <div className="text-center py-4 border-t border-gray-700">
